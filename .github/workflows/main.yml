@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       KERNEL_TREE:
-        description: "Kernel Tree"
+        description: "Kernel Tre"
         default: "https://github.com/olzhas0986/kernel_xiaomi_sm8250"
         required: true
       KERNEL_TREE_BRANCH:
