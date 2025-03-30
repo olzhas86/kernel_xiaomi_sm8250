@@ -1,11 +1,11 @@
 #!/bin/bash
-make CC=$(pwd)/clang/bin/clang \
-LD=$(pwd)/clang/bin/ld.lld \
-NM=$(pwd)/clang/bin/llvm-nm \
-AR=$(pwd)/clang/bin/llvm-ar \
-OBJCOPY=$(pwd)/clang/bin/llvm-objcopy \
-OBJDUMP=$(pwd)/clang/bin/llvm-objdump \
-STRIP=$(pwd)/clang/bin/llvm-strip \
+make CC=/lib/llvm-19/bin/clang \
+LD=/lib/llvm-19/bin/ld.lld \
+NM=/lib/llvm-19/bin/llvm-nm \
+AR=/lib/llvm-19/bin/llvm-ar \
+OBJCOPY=/lib/llvm-19/bin/llvm-objcopy \
+OBJDUMP=/lib/llvm-19/bin/llvm-objdump \
+STRIP=/lib/llvm-19/bin/llvm-strip \
 CROSS_COMPILE_ARM32=$(pwd)/gcc-linaro-13.0.0-2022.10-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf- \
 CROSS_COMPILE=$(pwd)/gcc-linaro-13.0.0-2022.10-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu- \
 O=out ARCH=arm64 -j$(($(nproc)+1)) $@
